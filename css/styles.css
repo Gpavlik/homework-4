@@ -78,11 +78,11 @@ h1, h2, h3 {
 .contact-list {
     display: flex;
 margin-left: auto;
-
-
-
+align-items: center;
 }
 .contact-mail {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -91,12 +91,18 @@ margin-left: auto;
     margin-right: 50px;
 }
 .contact-phone {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 1.14;
     text-decoration: none;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
 }    
+.contact-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
 .contact-mail:hover, .contact-mail:focus {
     color: var(--brand-color);
     cursor: pointer;
@@ -106,7 +112,11 @@ margin-left: auto;
     cursor: pointer;
     }
 .hero {
-    background: var(--fuller-color);
+    background-color: rgba(47, 48, 58, 0.4);
+    background-image:  url(../images/bg/bgImg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -136,6 +146,31 @@ margin-left: auto;
     margin-right: 30px;
     width: 270px;
 }
+
+.list>.item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    background-color: #F5F4FA;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    }
+.list>.item:nth-child(1)::before{
+    background-image: url(../images/ico/antenna.svg);
+}
+.list>.item:nth-child(2)::before {
+    background-image: url(../images/ico/clock\ 1.svg);
+}
+.list>.item:nth-child(3)::before {
+    background-image: url(../images/ico/diagram\ 1.svg);
+}
+.list>.item:nth-child(4)::before {
+    background-image: url(../images/ico/astronaut\ 1.svg);
+}
+
 .list>.item:last-child {
     margin-right: 0px;
 }
@@ -216,7 +251,37 @@ background-color: #F5F4FA;
     border-radius: 0px 0px 4px 4px;
     
 }
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.social-link  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+}
+.social-link:last-child {
+    margin-right: 0px;
+}
+.social-icon {
+    fill: #AFB1B8;
+}
 
+.social-link:hover .social-icon, .social-link:focus .social-icon {
+    fill: #FFFFFF;
+    }
+.social-link:hover, .social-link:focus {
+    background-color: var(--brand-color);
+}
 
 .card-description:last-child {
     margin-right: 0px;
@@ -243,6 +308,49 @@ background-color: #F5F4FA;
 .content {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px; 
+}
+.clients .title {
+    text-align: center;
+    color: #212121;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;        
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+.client-list {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.client-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.client-icon {
+    fill: #AFB1B8;;
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+    fill: var(--brand-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+    border: 1px solid var(--brand-color);
 }
 .footer {
     display: block;
@@ -291,7 +399,40 @@ padding-top: 20px;
     color: #FFFFFF;
     margin-bottom: 9px;
 }
-
+.find-us {
+    display: flex;
+    align-items: baseline;
+}
+.find {
+    width: 231px;
+    margin-right: 70px;
+}
+.social {
+    width: 206px;
+}
+.social .social-list{
+    padding: 0px;
+}
+.social .title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    }
+.social .social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social .social-icon{
+    fill: #fff;
+}
+.social .social-link:hover, .social .social-link:focus {
+    background-color: var(--brand-color);
+}
 .works {
     padding-top: 94px;
     padding-bottom: 94px;
